@@ -25,6 +25,11 @@
   src: url('../fonts/montserrat/Montserrat-SemiBold.ttf'); 
 }
 
+@font-face {
+  font-family: Coolvetica;
+  src: url('../fonts/coolvetica/coolvetica-rg.ttf'); 
+}
+
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 
@@ -183,10 +188,31 @@ iframe {
 
 
 .wrap-login100 {
-  width: 680px;
+  opacity: 0.80;
+  width: 500px;
+  background: #f7f7f7;
+  border-radius: 10px;
+  position: relative;
+}
+
+/*
+.title {
+  width: 700px;
+  background: #fff;
+  border-radius: 10px;
+  position: center;
+  font-family: Coolvetica;
+  font-size: 50px;
+}*/
+
+.title {
+  width: 500px;
   background: #fff;
   border-radius: 10px;
   position: relative;
+  font-family: fantasy;
+  font-size:100px;
+  font-size-adjust: initial;
 }
 
 
@@ -243,7 +269,7 @@ iframe {
   display: block;
   position: absolute;
   z-index: -1;
-  width: 100%;
+  width: 120%;
   height: 100%;
   border-radius: 10px;
   top: 0;

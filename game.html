@@ -1,0 +1,124 @@
+<html>
+	<head>
+		<span id="includes">
+		    <script src="jslib.js"></script>
+		    <script src="CryptoJS.js"></script>
+		    <script src="clicker.clicker.jsfiles.js"></script>
+		    <link rel="stylesheet" type="text/css" href="css/game.css">
+		</span>
+		<script type="text/javascript">
+			document.title = "Clicks: " + Math.floor(clickAmount);
+			cpsUpdate();
+			document.body.style.fontFamily = "Comic Sans MS";
+		</script>
+	</head>
+	<body onload="tickTemp=setInterval('tick()',1);loadCookie()" onkeypress="return keyLogF(event)" id="body">
+	<div class="background" src="images/Wallpaper_game2.png">
+	</div> 
+	<center>
+	<div align="center">
+		<img id="largeCursor" src="images/bitcoin.png" style="cursor: pointer">
+		<br>
+		<span><span id='amountOf'>0</span> clicks!</span>
+		<br>
+		<br>
+		<span><span id='clickerAmountDisplay'>0</span> Unit: +<span id='clickerTotalCpsDisplay'>0</span> bps</span>
+		<br>
+		<span><span id='cursorAmountDisplay'>0</span> Click Booster: +<span id='cursorClickTotalIncreaseDisplay'>0</span> bpc</span>
+		<br>
+		<br>
+		<br>
+		<div id='genUpgrade1Display' style="visibility: hidden"><button id="gu1"><span id='genUpgrade1DisplayText'><span id='genUpgrade1CostDisplay'>1000000</span>b - Generic Upgrade - <i>Plastic Tier</i> 1 - Autoclick (Your click is disabled and <b>autoclicks 2</b> times a second)</span></button></div>
+		<div id='genUpgrade2Display' style="visibility: hidden"><button id="gu2"><span id='genUpgrade2DisplayText'><span id='genUpgrade2CostDisplay'>2000000</span>b - Generic Upgrade - <i>Wood Tier</i> 2 - Wooden Mouse (Autoclick clicks <b>twice</b> a second)</span></button></div>
+		<br>
+		<div id='clickerUpgrade1Display' style="visibility: hidden"><button id="cu1"><span id='clickerUpgrade1DisplayText'><span id='clickerUpgrade1CostDisplay'>250</span>b - Clicker Upgrade - Fatter Fingers (Clickers get <b>+1 cpc</b>)</span></button></div>
+		<div id='clickerUpgrade2Display' style="visibility: hidden"><button id="cu2"><span id='clickerUpgrade2DisplayText'><span id='clickerUpgrade2CostDisplay'>1000</span>b - Clicker Upgrade - Mythical Pointers (Clickers get <b>+0.1 cpc</b> for each clicker owned)</span></button></div>
+		<div id='clickerUpgrade3Display' style="visibility: hidden"><button id="cu3"><span id='clickerUpgrade3DisplayText'><span id='clickerUpgrade3CostDisplay'>2500</span>b - Clicker Upgrade - <i>Plastic Tier</i> 1 - Sheet Plastic Clickers (Clickers are <b>twice</b> as efficient)</span></button></div>
+		<br>
+		<div id='cursorUpgrade1Display' style="visibility: hidden"><button id="cuu1"><span id='cursorUpgrade1DisplayText'><span id='cursorUpgrade1CostDisplay'>2500</span>b - Cursor Upgrade - Fatter Fingers (Cursors get <b>+1 cpc</b>)</span></button></div>
+		<div id='cursorUpgrade2Display' style="visibility: hidden"><button id="cuu2"><span id='cursorUpgrade2DisplayText'><span id='cursorUpgrade2CostDisplay'>10000</span>b - Cursor Upgrade - Mythical Pointer (Cursors get <b>+0.1 cpc</b> for each cursor owned)</span></button></div>
+		<div id='cursorUpgrade3Display' style="visibility: hidden"><button id="cuu3"><span id='cursorUpgrade3DisplayText'><span id='cursorUpgrade3CostDisplay'>50000</span>b - Cursor Upgrade - <i>Plastic Tier</i> 1 - Sheet Plastic Cursors (Cursors are <b>twice</b> as efficient)</span></button></div>
+			<br>
+		<div id='clackerUpgrade1Display' style="visibility: hidden"><button id="ca1"><span id='clackerUpgrade1DisplayText'><span id='clackerUpgrade1CostDisplay'>10000</span>b - Clacker Upgrade - Who needs help? (<b>0</b> clicker bpm, <b>+1</b> cursor bpm)</span></button></div>
+		<br>
+			<br>
+
+	<br>
+	<div><button id="bcl">Hire chinese labour for <span id='clickerCostDisplay'>75</span>c (<b>+<span id='clickerCpsDisplay'>1</span> cps</b>)</button></div>
+	<div><button id="bcu" id='buyCursor'>Buy a more efficient GPU for <span id='cursorCostDisplay'>200</span>b (<b>+<span id='cursorIncreaseDisplay'>1</span> cpc</b>)</button></div>
+	<div><button id="bca">Buy a Mining Farm for <span id='clackerCostDisplay'></span>(<b>+<span id='clackerCpmDisplay'>1</span> <span id='clackerModeDisplay'>clicker</span> bpm</b>)</button></div>
+	<div><button id="bcb">Hire a Remi unit for <span id='clackerCostDisplay'></span>(<b>+<span id='clackerCpmDisplay'>1</span> <span id='clackerModeDisplay'>clicker</span> bpm</b>)</button></div>
+	<div><button id="bcc">Buy a Mining Farm for <span id='clackerCostDisplay'></span>(<b>+<span id='clackerCpmDisplay'>1</span> <span id='clackerModeDisplay'>clicker</span> bpm</b>)</button></div>
+	<div><button id="bcd">Hire a Ben unit for <span id='clackerCostDisplay'></span>(<b>+<span id='clackerCpmDisplay'>1</span> <span id='clackerModeDisplay'>clicker</span> bpm</b>)</button></div>
+</div>
+</div>
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+<br>
+####
+		<br>
+		<div id="achievementDisplay"></div>
+		
+		<br>
+		<center>
+			<div id='saveDisplayArea' style="visibility: hidden"></div>
+			<textarea id='saveDisplayArea'></textarea>
+			<br>
+			<input type="checkbox" onchange="autosaveToggle(document.getElementById('as6i').value * 1000);uncheckAs(6)" id="as6">
+			<span><input type="number" style="height: 1px; width: 1px" value="0" oninput="if(this.value<1){this.value=1;}if(document.getElementById('as6').checked){autosaveToggle(document.getElementById('as6i').value * 1000);uncheckAs(6);}" id="as6i"> </span>
+			<br>
+			<input type="submit" value="Save" id="ssc">
+		</center>
+	<br>
+	<br>
+	<div><span id='autoclickToggleDisplay' style="visibility: hidden"><span id="autoclickToggleDisplayText">Autoclick on: </span>
+	<input type="checkbox" onchange="autoclickToggle();"></span></div>
+	<br>
+	<br>
+	<br>
+    </body>
+</html>

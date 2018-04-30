@@ -1,0 +1,3 @@
+Graphics -> images
+ht -> js
+Index -> Game
